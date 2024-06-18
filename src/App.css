@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Navbar Styles */
+nav {
+  background: #333;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+  color: #ff6347;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #ff6347;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 1.5em;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left 0.5s;
+}
+
+.openbtn {
+  font-size: 1.5em;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  display: none; /* Hidden by default */
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+  margin: 20px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #ff6347;
+}
+
+.intro h2 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.intro p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+/* About Me Section */
+.about-me {
+  text-align: center;
+}
+
+.about-me h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ff6347;
+}
+
+.about-me p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Skills and Hobbies Section */
+.skills-hobbies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills,
+.hobbies {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.skills h2,
+.hobbies h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #ff6347;
+}
+
+.skills ul,
+.hobbies ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills li,
+.hobbies li {
+  font-size: 1.2em;
+  margin: 10px 0;
+  padding: 10px;
+  background: #eaeaea;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.skills li:hover,
+.hobbies li:hover {
+  background: #ff6347;
+  color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  .openbtn {
+    display: inline-block; /* Show hamburger menu */
+  }
+
+  .sidebar {
+    width: 250px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    display: none; /* Hide sidebar on larger screens */
+  }
+
+  .openbtn {
+    display: none;
+  }
+}
